@@ -8,10 +8,12 @@ class Program
     static void compareSeq(List<int> one, List<int> two)
     {
         List<int> differences = new List<int>();
+        List<int> sames = new List<int>();
+        
         one.Sort();
         two.Sort();
 
-        for (int i = 0; i < one.Count; i++) 
+        for (int i = 0; i < one.Count; i++)
         {
             if (one[i] > two[i])
             {
@@ -31,6 +33,26 @@ class Program
 
         int total = differences.Sum();
         Console.WriteLine($"Your total is : {total}");
+
+        
+
+        for (int a = 0; a < one.Count; a++)
+        {
+            int count = 0;
+            int tempIndex = 0;
+            for (int b = 0; b < two.Count; b++)
+            {
+                if (one[a] == two[b])
+                {
+                    count++;
+                }                
+            }
+            tempIndex = one[a] * count;
+            sames.Add(tempIndex);
+        }
+        Console.WriteLine(sames.Count);
+        int simIndex = sames.Sum();
+        Console.WriteLine($"Your similarity value should be {simIndex}");
 
     }
     static void Main()
