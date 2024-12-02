@@ -3,7 +3,8 @@ using System;
 using System.IO;
 using System.Numerics;
 using System.Collections.Generic;
-class Program 
+using System.Linq;
+class DAY1 
 {
     static void compareSeq(List<int> one, List<int> two)
     {
@@ -55,7 +56,7 @@ class Program
         Console.WriteLine($"Your similarity value should be {simIndex}");
 
     }
-    static void Main()
+    static void AMain()
     {
         // Get the directory where the executable is running
         string directory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
@@ -93,6 +94,9 @@ class Program
         List<int> differences = new List<int>();       
 
         compareSeq(leftItems, rightItems);
+
+        Console.WriteLine("shit");
+        Console.ReadLine();
     }
 
     
