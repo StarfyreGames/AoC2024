@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-public class Class1
+public class Day2
 {
     static int safeCount = 0;
 
